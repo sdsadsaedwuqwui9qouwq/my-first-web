@@ -1,142 +1,155 @@
-body {
-    background-color:  #F9F7F7;
-    color: #112D4E ;
-    line-height: 1.7;
-    margin: 0;
-}
-
-header {
- background-color: #fa8a0b;
- color: white;
- text-align: center;
- padding: 50px 0;
-
-
-
-
-
-}
+  body {
+        font-family: "Noto Sans KR", sans-serif;
+        background-color: #FFC400;           
+        color:   #2C2C2C;
+        line-height: 1.7;
+        margin: 0;
+    }
+    header, footer {
+        padding: 50px 0;
+    } 
+    main {
+        width: 80%;
+        max-width: 10000px;
+        margin: 40px auto;
+        padding: 10px;
+        background-color: white;
+        border: 1px solid #ddd;
+    }
+    .material-symbols-outlined {
+        font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+    }
     
+    .material-symbols-outlined {
+     font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
+    }
 
-nav{
+    header{
+        background-color: rgb(252, 136, 3);
+        color: black;
+        text-align: center;
+        padding: 50px 0;
+    }
+    .my-button {
+        display: inline-block;
+        padding: 15px 30px;
+        background-color: black;
+        color: white;
+        text-decoration: none;
+        border-radius: 30px;
+        margin-top: 20px;
+        transition: 0.3s;
+    }
+        .my-button:hover{
+        background-color: olive;
+    transform: translateY(-3px);
+    }
+    nav{
+            text-align: center;
+            padding: 15px;
+            background-color: rgb(0, 5, 5);
+        }
+       nav a {
+        margin: 0 15px;
+        text-decoration: none;
+        font-weight: bold;
+        color: #8cf305 ;
+       } 
 
-    text-align: center;
-    padding: 15px;
-    background-color: wheat;
+       img {
+        display: block;
+        margin: 30px auto;
+        width: 250px;
+        border-radius: 50%;
+        border: 10px solid white;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+       }
 
+       .crop-item{
+        display: flex;
+        gap: 50px;
+        padding: 30px;
+        border-radius: 15px;
+        background-color: rgb(253, 10, 10);
+       }
+       .crop-image {
+        flex: 1;
+       }
+       .crop-details{
+        flex: 1.5;
+       }
+       .step-guide {
+        border: 1px dashed black;
+        text-align: center;
+       }    
+       #order-area {
+        margin-top: 60px;
+        padding: 30px;
+        background-color: rgb(204, 238, 12);
+        border: white solid #e0e0e0;
+        border-radius: 20px;
+       }
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        max-width: 500px;
+        border-radius: 8px;
 
+    }
+    .input-group {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        border-radius: 8px;
 
-
-}
-
-   nav a{
-   
-
-  margin: 0 15px;
-  text-decoration: none;
-  font-weight: bold;
-  color: #3F72AF
-
-
-
-   }
-
-   img{
-    display: block;
-    margin: 50px auto;
-    width: 400px;
-    border-radius:  100%;
-    border: 10px solid white;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-   }
-
-   
-header, footer {
-    
-    padding: 50px 0;
-}
-
-
-main {
-    width: 80%;           
-    max-width: 800px;     
-    margin: 40px auto;    
-    padding: 30px;        
-    background-color: white; 
-    border: 1px solid #ddd; 
-
-}
-.crop-item {
-    display: flex;        
-    flex-wrap: wrap;      
-    gap: 50px;            
-    padding: 30px;        
-    border-radius: 15px;  
-    background-color: #f9fdf9;
-}
-
-
-.crop-image {
-    flex: 1;              
-
-}
-.crop-details {
-    flex: 1.5;            
-}
-
-.step-guide {
-    border: 1px dashed #4caf50; 
-    text-align: center;         
-    margin: 10px 0;
-}
-
-
-.my-button {
-display: inline-block; 
-background-color: #3F72AF; 
-color: white;
-text-decoration: none;
-border-radius: 30px;
-margin-top: 20px;
-transition: 0.3s;
-}
-
-.my-button:hover {
-background-color: #112D4E; 
-transform: translateY(-3px); 
-}
-
-
-
-
+    }
 .input-row {
     display: flex;
     gap: 15px;
-    margin-bottom: 20px;
+    margin-top: 20px;
 }
+
 .input-row .input-group {
     flex: 1;
 }
 
 
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px; 
+    border: 1px solid #ddd; 
+    box-sizing: border-box; 
+}
+
 .input-group input:focus,
 .input-group textarea:focus {
     outline: none;
-    border: #4caf50 ;
-    box-shadow:0 0 8px rgbe(76, 175, 80, 0.2);
+    border-color: #000000;
+    box-shadow: 0 0 8px rgba(63, 255, 197, 0.753);
 }
 
-select{
+select {
     width: 100%;
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 8px;
     border: 1px solid #ddd;
     background-color: white;
+    
 }
 
-
-order-btn {
-    background-color: #2e7d32;
+.order-btn {
+    background-color: #fa00d0;
     color: white;
     padding: 15px;
     border: none;
@@ -145,43 +158,66 @@ order-btn {
     font-size: 18px;
     font-weight: bold;
     cursor: pointer;
-    transition: 0.1s;
+    transition:  0.1s; 
 }
 
-
-order-btn:hover {
-    background-color: #388e3c;
-    transform: translatey(2px);
-
+.order-btn:hover {
+    background-color: #f3c705;
+    transform: translateY(2px);
 }
 
-order-btn:hover {
-    transform: translatey(2px);
-
+.order-btn:active {
+    transform: translateY(5px);
 }
 
-
-
-
-
-
-.receipt-box{
-    margin: 30px;
+.receipt-box {
+    margin-top: 30px;
     padding: 20px;
-    border: 2px dashed #f59d18;
-    background-color: #00000000;
+    border: 2px dashed rgb(188, 231, 30);
+    background-color: white;
     border-radius: 10px;
     display: none;
 }
-
-
-.receipt-box h3{
-    color: #2e7d32;
+.receipt-box h3 {
+    color: #f3a90a;
     border-bottom: 1px solid #eee;
     padding-bottom: 10px;
 }
 
+.display-box{
+    text-align: center;
+    background-color: #ec1717;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 30px;
 
+}
+ #targtImg{
+    transition: transform 0.3s ease;
+ }
+
+ .thumb-list img{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+
+ }
+
+ .thumb-list img {
+    cursor: pointer;
+    border: 3px solid transparent;
+    transition: 0.2s;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+ }
+ .thumb-list img:hover {
+    border-color: #eca50c;
+    transform: scale(1.1);
+
+ }
 
 
 
