@@ -218,6 +218,22 @@ select {
     transform: scale(1.1);
 
  }
+ 
+.thumb-list {
+  display: grid;                    
+  grid-template-columns: repeat(5, 1fr); 
+  gap: 15px;                       
+  margin-top: 20px;
+}
+
+.thumb-list img {
+  width: 100%;                      
+  height: 120px;                   
+  object-fit: cover;                
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
 
 
 
