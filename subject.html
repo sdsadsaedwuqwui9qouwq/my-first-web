@@ -2,22 +2,20 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-
     <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>나의 웹페이지</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나의 웹페이지</title>
     
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">    
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-<link rel="stylesheet" href="./style.css">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
 <header>
-<h1><span class="material-symbols-outlined"></span>불가능을 극복해라 <br> 회의론자들 침묵하다.</h1>
+    <h1><span class="material-symbols-outlined">eco</span> 불가능을 극복해라 <br> 회의론자들 침묵하다.</h1>
 </header>  
 
 <nav>
@@ -25,133 +23,108 @@
     <a href="subject.html">전공 탐구</a>
     <a href="gallery.html">갤러리</a>
 </nav>
+
 <main>
-
-
-    <main>
-  <div id="login-box" style="text-align: center; margin: 50px;">
-    <h2>시스템 인증이 필요합니다</h2>
-    <input type="text" id="userName" placeholder="사용자 이름" /><br>
-    <input type="password" id="userPw" placeholder="암호 입력" /><br>
-    <button onclick="checkLogin()">입장하기</button>
-  </div>
-
-  <div id="secret-area" style="display: none;">
-      
-<section class="agriculture-portfolio">
- <article class="crop-item">
-
-    <figure class="crop-image">
-        <img src="imgs/6dc96518219144388083cafcb162fb4a.jpg"직접제배한농작물사진" />
-        <figcaption></figcaption>
-    </figure>
-<div class="crop-details">
-    <h3>농작물 명칭 : 아스파라거스 </h3>
-
-    <section class="info-block">
-        <h4>재배및생산특성</h4>
-        <ul>
-            <li><strong>품종:</strong>그린 아스파라거스 </li>
-            <li><strong>재배 환경</strong>: 16~25°C 유지, 배수 좋은 토양<br>
-            환경재배: 햇빛, pH 6.0~6.5 유지
-</li>
-        </ul>
-    </section>
-    <section class="info-block distribution">
-        <h4>유통구조설계</h4>
-        <div class="step-guide">
-        <span>호주 농장</span>→<span>한국 아스파라거전용 물류센터</span>→<span>소비자(일반인, 카페, 호텔, 우리집, 고기집 등등)</span>
-        </div>
-        <ul>
-            <li><strong>물류방식:</strong>항공 운송, 증열 처리, 개별포장</li>
-              <li><strong>판매 전략:</strong>예약판매, 프랜차이즈 납품</li>
-        </ul>
-
-
-       
-
-
-
-
-
-    </section>
-    
-</div>
-
-
-</div> 
-
-</article>   
-
-</section>
-        <section id="order-area">
-        <hr>
-        <h2> 주문하십시오</h2>
-        <form>
-           <div class="input-row">
-    <div class="input-group">
-        <label>주문자성함</label>
-        <input type="text" id="userName" placeholder="실명을 입력하세요">
+    <div id="login-box" style="text-align: center; margin: 50px;">
+        <h2>시스템 인증이 필요합니다</h2>
+        <input type="text" id="username" placeholder="사용자 이름" /><br>
+        <input type="password" id="userPw" placeholder="암호 입력" /><br>
+        <button onclick="checkLogin()">입장하기</button>
     </div>
-    <div class="input-group">
-        <label>연락처</label>
-        <input type="text" id="userPhone" placeholder="010-0000-0000">
-    </div>
-</div>
 
-<div class="input-row">
-    <div class="input-group">
-        <label class="unitWeight">구매단위선택</label>
-        <select id="unitWeight">
-            <option value="20000">아스파라거스 1kg (20,000)</option>
-            <option value="40000">아스파라거스 3kg (40,000)</option>
-            <option value="60000">아스파라거스 5kg (60,000)</option>
-    </select>
-    </div>
-<div class="input-group">
-    <label for="quantity">주문수량(박스)</label>
-    <input type="number" id="quantity" value="1" min="1" max="10">
-</div>
-</div>
-
-            
-            <div class="input-group">
-                <label for="">배송 방식 선택</label>
-                <select name="" id="deliveryFee">
-                    <option value="3000">일반 택배 (3000원)</option>
-                    <option value="5000">신선 새벽 배송 (5000원)</option>
-                    <option value="0">천호동 로컬푸드 매장 픽업 (무료)</option>
-                </select>
-            </div>
-
-            <div class="input-group">
-                <label>배송 메시지</label>
-                <textarea placeholder="부재시 문 앞에 놓아주세요"></textarea>
-            </div>
-            <button type="button" class="order-btn" onclick="processOrder()">지금 바로 주문 완료
-            </button>
-        <div id="receipt" class="receipt-box"></div>
-        </form>
+    <div id="secret-area" style="display: none;">
+        <section class="agriculture-portfolio">
+            <article class="crop-item">
+                <figure class="crop-image">
+                    <img src="imgs/6dc96518219144388083cafcb162fb4a.jpg" alt="직접 재배한 농작물 사진" />
+                    <figcaption></figcaption>
+                </figure>
+                <div class="crop-details">
+                    <h3>농작물 명칭 : 아스파라거스 </h3>
+                    <section class="info-block">
+                        <h4>재배 및 생산 특성</h4>
+                        <ul>
+                            <li><strong>품종:</strong> 그린 아스파라거스 </li>
+                            <li><strong>재배 환경:</strong> 16~25°C 유지, 배수 좋은 토양<br>
+                            환경재배: 햇빛, pH 6.0~6.5 유지</li>
+                        </ul>
+                    </section>
+                    <section class="info-block distribution">
+                        <h4>유통 구조 설계</h4>
+                        <div class="step-guide">
+                            <span>호주 농장</span> → <span>한국 아스파라거스 전용 물류센터</span> → <span>소비자(일반인, 카페, 호텔 등)</span>
+                        </div>
+                        <ul>
+                            <li><strong>물류 방식:</strong> 항공 운송, 증열 처리, 개별 포장</li>
+                            <li><strong>판매 전략:</strong> 예약 판매, 프랜차이즈 납품</li>
+                        </ul>
+                    </section>
+                </div>
+            </article> 
         </section>
-    <h3 style="color: #2e7d32;">👋 <span id="user-display"></span>님, 반갑습니다!</h3>
 
+        <section id="order-area">
+            <hr>
+            <h2>주문하십시오</h2>
+            <form>
+                <div class="input-row">
+                    <div class="input-group">
+                        <label>주문자 성함</label>
+                        <input type="text" id="userName" placeholder="실명을 입력하세요">
+                    </div>
+                    <div class="input-group">
+                        <label>연락처</label>
+                        <input type="text" id="userPhone" placeholder="010-0000-0000">
+                    </div>
+                </div>
+
+                <div class="input-row">
+                    <div class="input-group">
+                        <label class="unitWeight">구매 단위 선택</label>
+                        <select id="unitWeight">
+                            <option value="20000">아스파라거스 1kg (20,000)</option>
+                            <option value="40000">아스파라거스 3kg (40,000)</option>
+                            <option value="60000">아스파라거스 5kg (60,000)</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="quantity">주문 수량(박스)</label>
+                        <input type="number" id="quantity" value="1" min="1" max="10">
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>배송 방식 선택</label>
+                    <select id="deliveryFee">
+                        <option value="3000">일반 택배 (3,000원)</option>
+                        <option value="5000">신선 새벽 배송 (5,000원)</option>
+                        <option value="0">천호동 로컬푸드 매장 픽업 (무료)</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label>배송 메시지</label>
+                    <textarea placeholder="부재시 문 앞에 놓아주세요"></textarea>
+                </div>
+                <button type="button" class="order-btn" onclick="processOrder()">지금 바로 주문 완료</button>
+                <div id="receipt" class="receipt-box" style="display:none; border:1px solid #ccc; padding:20px; margin-top:20px;"></div>
+            </form>
+        </section>
+
+        <h3 style="color: #2e7d32; margin-top: 20px;">👋 <span id="user-display"></span>님, 반갑습니다!</h3>
+
+        <div id="settings" style="margin-top: 30px; padding: 20px; border: 1px solid #ddd; background: #fff;">
+            <h4>시스템 보안 설정</h4>
+            <p style="font-size: 0.9em; color: #666;">보안을 위해 정기적으로 비밀번호를 변경해 주세요.</p>
+            <input type="password" id="newPw" placeholder="새 비밀번호 입력" />
+            <button onclick="changePassword()">비밀번호 변경</button>
+            <button onclick="logout()">로그아웃</button>
+        </div>
     </div>
-     <hr>
-<div id="settings" style="margin-top: 30px; padding: 20px; border: 1px solid #ddd; background: #fff;">
-  <h4>시스템 보안 설정</h4>
-  <p style="font-size: 0.9em; color: #666;">보안을 위해 정기적으로 비밀번호를 변경해 주세요.</p>
-  <input type="password" id="newPw" placeholder="새 비밀번호 입력" />
-  <button onclick="changePassword()">비밀번호 변경</button>
-  <button onclick="logout()">로그아웃</button>
-</div>
-
 </main>
 
-</main>
 <footer>
-
-    문의 : rlakrtkcndrmrgua@gmail.com  &copy; all right reserved by 2026 임호철
-    
+    문의 : rlakrtkcndrmrgua@gmail.com &copy; all right reserved by 2026 임호철
 </footer>
 
 <script>
@@ -159,120 +132,92 @@
         let name = document.getElementById('userName').value;
         let phone = document.getElementById('userPhone').value;
         
-        
         if (name === "" || phone === "") {
             alert("⚠️ 성함과 연락처를 모두 입력해 주세요!");
             return;
         }
 
-        
         let quantity = Number(document.getElementById("quantity").value);
-        let feeValue = document.getElementById("deliveryFee").value;     
-        let deliveryFee = Number(document.getElementById("deliveryFee").value);
-        
-        let unitSelect = document.getElementById('unitWeight');          
-        let productPrice = Number(unitSelect.value);                     
+        let unitSelect = document.getElementById('unitWeight');           
+        let productPrice = Number(unitSelect.value);                            
         let productName = unitSelect.options[unitSelect.selectedIndex].text; 
         
         let basePrice = productPrice * quantity; 
+        let deliveryFee = Number(document.getElementById("deliveryFee").value);
 
-       
+        // 3만원 이상 무료 배송 로직
         if (basePrice >= 30000) {
             deliveryFee = 0;
         }
 
         let totalPrice = basePrice + deliveryFee;
         let dateString = new Date().toLocaleString();
-        
         let receipt = document.getElementById('receipt');
         
-       
         receipt.innerHTML = `
-        <h3> 주문 확인 영수증 </h3>
-        <p style="color: gray; font-size: 0.8em;">주문 시각: ${dateString}</p>
-        <hr>
-        <p><strong>주문자:</strong> ${name} 님</p>
-        <p><strong>주문상품:</strong> ${productName}</p>
-        <p><strong>주문수량:</strong> ${quantity} 박스</p>
-        <p><strong>상품총액:</strong> ${basePrice.toLocaleString()}원</p>
-        <p><strong>배송비:</strong>
-            ${deliveryFee === 0 ? "무료배송" : deliveryFee.toLocaleString() + "원"}
-        </p>
-        <p style="font-size: 1.2em; margin-top: 10px;">
-            <strong>최종결제금액:
-            <span style="color:red;">${totalPrice.toLocaleString()}원</span>
-            </strong>
-        </p>
-        <hr>
-        <p style="text-align:center;"> 오늘도 당신의 후원 덕분에 거렁뱅이가 살아남습니다...</p>
+            <h3> 주문 확인 영수증 </h3>
+            <p style="color: gray; font-size: 0.8em;">주문 시각: ${dateString}</p>
+            <hr>
+            <p><strong>주문자:</strong> ${name} 님</p>
+            <p><strong>주문상품:</strong> ${productName}</p>
+            <p><strong>주문수량:</strong> ${quantity} 박스</p>
+            <p><strong>상품총액:</strong> ${basePrice.toLocaleString()}원</p>
+            <p><strong>배송비:</strong> ${deliveryFee === 0 ? "무료배송" : deliveryFee.toLocaleString() + "원"}</p>
+            <p style="font-size: 1.2em; margin-top: 10px;">
+                <strong>최종결제금액: <span style="color:red;">${totalPrice.toLocaleString()}원</span></strong>
+            </p>
+            <hr>
+            <p style="text-align:center;">오늘도 당신의 후원 덕분에 거렁뱅이가 살아남습니다...</p>
         `;
-        
         receipt.style.display = "block";
     }
     
-  
-  function checkLogin() {
-  let name = document.getElementById("userName").value;
-  let pw = document.getElementById("userPw").value;
+    function checkLogin() {
+        let name = document.getElementById("username").value;
+        let pw = document.getElementById("userPw").value;
+        let currentPw = localStorage.getItem("userPassword") || "1234";
 
-  
-  let currentPw = localStorage.getItem("userPassword") || "1234";
+        if (name !== "" && pw === currentPw) {
+            localStorage.setItem("isLoggedIn", "true");
+            localStorage.setItem("savedname", name);
+            localStorage.setItem("userPassword", currentPw);
 
-  if (pw === currentPw && name !== "") {
-   
-    localStorage.setItem("isLoggedIn", "true");
-    localStorage.setItem("savedName", name);
-    localStorage.setItem("userPassword", currentPw);
+            alert(name + "님, 인증되었습니다.");
+            showSecretArea(name);
+        } else {
+            alert("이름을 입력하지 않았거나 암호가 틀렸습니다.");
+        }
+    }
 
-    alert(name + "님, 인증 정보가 저장소에 기록되었습니다.");
+    function showSecretArea(name) {
+        document.getElementById("login-box").style.display = "none";
+        document.getElementById("secret-area").style.display = "block";
+        document.getElementById("user-display").innerText = name;
+    }
 
-    
-    document.getElementById("login-box").style.display = "none";
-    document.getElementById("secret-area").style.display = "block";
-    document.getElementById("user-display").innerText = name;
+    window.onload = function() {
+        let isLoggedIn = localStorage.getItem("isLoggedIn");
+        let savedName = localStorage.getItem("savedname"); // 변수명 통일
 
-  } else {
-    alert("이름을 입력하지 않았거나 암호가 틀렸습니다.");
-  }
-}
-  window.onload = function() {
-    
-  let isLoggedIn = localStorage.getItem("isLoggedIn");
-  let savedName = localStorage.getItem("savedName");
-
-  if (isLoggedIn === "true") {
-    
-    document.getElementById("login-box").style.display = "none"; 
-    
-    
-    document.getElementById("secret-area").style.display = "block";
-    
-   
-    document.getElementById("user-display").innerText = savedName; 
-
+        if (isLoggedIn === "true" && savedName) {
+            showSecretArea(savedName);
+        }
+    }
     
     function changePassword() {
-  let newPw = document.getElementById("newPw").value;
-  if (newPw.length < 4) { alert("암호는 4자리 이상이어야 합니다."); return; }
-  localStorage.setItem("userPassword", newPw);
-  alert("비밀번호가 변경되었습니다.");
-}
+        let newPw = document.getElementById("newPw").value;
+        if (newPw.length < 4) { alert("암호는 4자리 이상이어야 합니다."); return; }
+        localStorage.setItem("userPassword", newPw);
+        alert("비밀번호가 변경되었습니다.");
+    }
 
-function logout() {
-  if (confirm("로그아웃 하시겠습니까?")) {
-    localStorage.removeItem("isLoggedIn");
-    localStorage.removeItem("savedName");
-    location.href = "index.html";
-  }
-}
-
-
-
-
-  }
-}
-
-
+    function logout() {
+        if (confirm("로그아웃 하시겠습니까?")) {
+            localStorage.removeItem("isLoggedIn");
+            localStorage.removeItem("savedname");
+            location.reload(); // 현재 페이지 새로고침
+        }
+    }
 </script>
 </body>
 </html>
