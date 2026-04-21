@@ -12,14 +12,28 @@
         <h1>추억을 회상한다면 당신은 그리운거다.</h1> (내가 좋아하는 사진들) <br> 
         <span class="material-symbols-outlined">account_balance</span>
     </header>
+<div id="login-box" style="text-align: center; margin: 50px;">
+        <h2>시스템 인증이 필요합니다</h2>
+        <input type="text" id="userld" placeholder="사용자 이름" /><br>
+        <input type="password" id="userPw" placeholder="암호 입력" /><br>
+        <button onclick="checkLogin()">입장하기</button>
+    </div>
+
+ 
+
 
     <nav>
         <a href="index.html">홈으로</a>
         <a href="subject.html">전공 탐구</a>
         <a href="gallery.html">갤러리</a>
     </nav>
-
+     
     <main>
+       <div id="secret-area" style="display: none;">
+        
+        <h3 style="color: #2e7d32; margin-top: 20px;">👋 <span id="user-display"></span>님, 반갑습니다!</h3>
+
+
         <div class="display-box">
             <img id="targetImg" src="imgs/OIP (2).webp" style="width: 100%; max-width: 500px;"/>
             <p id="targetDesc">emea 스테이지1 우승!</p>
@@ -37,7 +51,19 @@
             <img src="imgs/nrg-juara-valorant-champions-2025.jpg" onclick="show('imgs/nrg-juara-valorant-champions-2025.jpg', '10월 6일 간절, 행복, 사랑, 노력, 영광, 다 뺏긴 그 날...')"/>
             <img src="imgs/OIP (6).webp" onclick="show('imgs/OIP (6).webp', '너는 할 수 있다!')"/>
 
+            <div id="settings" style="margin-top: 30px; padding: 40px; border: 10px solid #fc8702; background: #fff ;">
+                
+            <h4>시스템 보안 설정</h4>
+            
+            <p style="font-size: 0.9em; color: #666;">보안을 위해 정기적으로 비밀번호를 변경해 주세요.</p>
+            <input type="password" id="newPw" placeholder="새 비밀번호 입력" />
+            <button onclick="changePassword()">비밀번호 변경</button>
+            <button onclick="logout()">로그아웃</button>
         </div>
+        
+        </div>
+        <img src="imgs/night-view-7573485_1280.jpg">
+
     </main>
 
     <footer></footer>
@@ -47,6 +73,56 @@
             document.getElementById("targetImg").src = imgPath;
             document.getElementById("targetDesc").innerText = text;
         }
+
+
+
+
+        function checkLogin() {
+        let name = document.getElementById("userld").value;
+        let pw = document.getElementById("userPw").value;
+        let currentPw = localStorage.getItem("userPassword") || "1234";
+
+        if (name !== "" && pw === currentPw) {
+            localStorage.setItem("isLoggedIn", "true");
+            localStorage.setItem("savedname", name);
+            localStorage.setItem("userPassword", currentPw);
+
+            alert(name + "님, 인증되었습니다.");
+            showSecretArea(name);
+        } else {
+            alert("이름을 입력하지 않았거나 암호가 틀렸습니다.");
+        }
+    }
+
+    function showSecretArea(name) {
+        document.getElementById("login-box").style.display = "none";
+        document.getElementById("secret-area").style.display = "block";
+        document.getElementById("user-display").innerText = name;
+    }
+
+    window.onload = function() {
+        let isLoggedIn = localStorage.getItem("isLoggedIn");
+        let savedName = localStorage.getItem("savedname"); // 변수명 통일
+
+        if (isLoggedIn === "true" && savedName) {
+            showSecretArea(savedName);
+        }
+    }
+    
+    function changePassword() {
+        let newPw = document.getElementById("newPw").value;
+        if (newPw.length < 4) { alert("암호는 4자리 이상이어야 합니다."); return; }
+        localStorage.setItem("userPassword", newPw);
+        alert("비밀번호가 변경되었습니다.");
+    }
+
+    function logout() {
+        if (confirm("로그아웃 하시겠습니까?")) {
+            localStorage.removeItem("isLoggedIn");
+            localStorage.removeItem("savedname");
+            location.reload(); // 현재 페이지 새로고침
+        }
+    }
     </script>
 </body>
 </html>
